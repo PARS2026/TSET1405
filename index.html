@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه تست</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f0f2f5;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 14px 36px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        #box {
+            margin-top: 30px;
+            width: 280px;
+            min-height: 60px;
+            border: 2px solid #cbd5e1;
+            border-radius: 10px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            color: #1e293b;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="showText()">تست</button>
+        <div id="box"></div>
+    </div>
+
+    <script>
+        function showText() {
+            document.getElementById('box').innerText = 'تست';
+        }
+    </script>
+</body>
+</html>
