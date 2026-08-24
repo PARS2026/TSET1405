@@ -20,13 +20,21 @@
         }
         .container {
             text-align: center;
+            max-width: 500px;
+            padding: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         button {
             background: #2563eb;
             color: white;
             border: none;
-            padding: 14px 36px;
-            font-size: 20px;
+            padding: 14px 28px;
+            font-size: 18px;
             border-radius: 10px;
             cursor: pointer;
             transition: background 0.2s;
@@ -34,31 +42,57 @@
         button:hover {
             background: #1d4ed8;
         }
+        button.clear-btn {
+            background: #dc2626;
+        }
+        button.clear-btn:hover {
+            background: #b91c1c;
+        }
+        button.ai-btn {
+            background: #16a34a;
+        }
+        button.ai-btn:hover {
+            background: #15803d;
+        }
         #box {
             margin-top: 30px;
-            width: 280px;
-            min-height: 60px;
+            width: 100%;
+            min-height: 120px;
             border: 2px solid #cbd5e1;
             border-radius: 10px;
             background: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 22px;
+            font-size: 18px;
             color: #1e293b;
-            padding: 15px;
+            padding: 20px;
+            text-align: justify;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <button onclick="showText()">تست</button>
+        <div class="buttons">
+            <button onclick="showText()">تست</button>
+            <button class="clear-btn" onclick="clearBox()">پاک کردن</button>
+            <button class="ai-btn" onclick="showAI()">مزایای هوش مصنوعی</button>
+        </div>
         <div id="box"></div>
     </div>
 
     <script>
         function showText() {
             document.getElementById('box').innerText = 'تست';
+        }
+
+        function clearBox() {
+            document.getElementById('box').innerText = '';
+        }
+
+        function showAI() {
+            document.getElementById('box').innerText = 'هوش مصنوعی مزایای زیادی دارد: افزایش بهره‌وری، خودکارسازی کارهای تکراری، کمک به تشخیص پزشکی، بهبود آموزش شخصی‌سازی‌شده، تحلیل داده‌های بزرگ و تصمیم‌گیری بهتر. همچنین می‌تواند در حل مسائل پیچیده علمی و ایجاد نوآوری‌های جدید بسیار مؤثر باشد.';
         }
     </script>
 </body>
